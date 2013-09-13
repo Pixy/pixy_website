@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Exemple pGallery</title>
+        <link rel="stylesheet" media="screen" type="text/css" title="Design" href="css/style.css" />
+        <link rel="stylesheet" media="screen" type="text/css" title="Design" href="css/jquery.pGallery.css" />
+        <link rel="stylesheet" media="screen" type="text/css" title="Design" href="css/jquery.jscrollpane.css" />
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/mwheelIntent.js"></script>
+        <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="js/jquery.pGallery.js"></script>
+    </head>
+
+    <body>
+      <h1>Exemples d'utilisation de pGallery</h1>
+      
+      <p class="text">
+        Exemples d'utilisation de <span class="rouge">pGallery</span>.<br />
+        Vous pouvez <span class="rouge">naviguer</span> entre les différentes images grâce aux <span class="rouge">touches gauche et droite</span> de votre clavier.<br />
+        Pour fermer la gallerie, appuyez sur la <span class="rouge">touche Echap</span> ou cliquez sur <span class="rouge">la croix</span> en haut à droite.
+      </p>
+      
+      <div id="pGallery">
+        <a href="#">EXEMPLE 1 (cliquez pour ouvrir la gallerie)</a>
+        <ul class="pListe">
+          <li><a href="images/1.jpg" rel="images/miniatures/1.jpg" >Une langue</a></li>
+          <li><a href="images/2.jpg" rel="images/miniatures/2.jpg" ></a></li>
+          <li><a href="images/3.jpg" rel="images/miniatures/3.jpg" >Guizmo ?</a></li>
+          <li><a href="images/4.jpg" rel="images/miniatures/4.jpg" >Music</a></li>
+          <li><a href="images/5.jpg" rel="images/miniatures/5.jpg" >Deadmau5</a></li>
+          <li><a href="images/6.jpg" rel="images/miniatures/6.jpg" ></a></li>
+          <li><a href="images/7.jpg" rel="images/miniatures/7.jpg" ></a></li>
+          <li><a href="images/8.jpg"></a></li>
+          <li><a href="images/9.jpg" rel="images/miniatures/9.jpg" >Nike</a></li>
+          <li><a href="images/10.jpg" rel="images/miniatures/10.jpg" >RATP</a></li>
+          <li><a href="images/11.png" >Un plus long titre pour tester comment ça fonctionne</a></li>
+        </ul>
+      </div>
+      
+      <div class="scripts">
+        <p>Le code : </p>
+        <p>
+        $(<span class="orange">'#pGallery'</span>).pGallery({</span><br />
+          <span class="orange">'thumbnails'</span> <span class="vert">true</span>, <span class="gris">// Affichage ou non de la navigation par Thumbnails</span><br />
+          <span class="orange">'navigation'</span>: <span class="vert">true</span>, <span class="gris"> // Affichage ou non de la navigation par flèches</span><br />
+          <span class="orange">'currentImg'</span>: <span class="jaune">0</span>,     <span class="gris">// Première image appelée</span><br />
+          <span class="orange">'fadeTime'</span>: <span class="jaune">500</span>,   <span class="gris"> // Durée de la transition lors de l'animation</span><br />
+          <span class="orange">'circular'</span>: <span class="vert">true</span>,     <span class="gris"> // Circulaire</span><br />
+          <span class="orange">'auto'</span>: <span class="vert">false</span>,       <span class="gris"> // Navigation automatique</span><br />
+          <span class="orange">'interval'</span>: <span class="jaune">5000</span>, <span class="gris"> // Intervalle pour la navigation automatique</span><br />
+          <span class="orange">'title'</span>: <span class="orange">'Titre principale du slider'</span>,<span class="gris"> // Titre principale du Slider</span><br />
+          <span class="orange">'keyboardNav'</span>: <span class="vert">true </span><span class="gris">// Navigation par les flèches du clavier</span><br />
+          <span class="orange">'caption'</span>: <span class="vert">false </span><span class="gris">// Affichage des captions</span><br />
+        });
+        </p>
+      </div>
+      
+      <div id="pGallery2">
+        <a href="#">EXEMPLE 2  (cliquez pour ouvrir la gallerie)</a>
+        <ul class="pListe">
+          <li><a href="images/1.jpg" rel="images/miniatures/1.jpg" >Une langue</a></li>
+          <li><a href="images/2.jpg" rel="images/miniatures/2.jpg" ></a></li>
+          <li><a href="images/3.jpg" rel="images/miniatures/3.jpg" >Guizmo ?</a></li>
+          <li><a href="images/9.jpg" rel="images/miniatures/9.jpg" >Nike</a></li>
+          <li><a href="images/10.jpg" rel="images/miniatures/10.jpg" >RATP</a></li>
+          <li><a href="images/11.png" >Un plus long titre pour tester comment ça fonctionne</a></li>
+        </ul>
+      </div>
+      
+      <div class="scripts">
+        <p>Le code : </p>
+        <p>
+        $(<span class="orange">'#pGallery2'</span>).pGallery({</span><br />
+          <span class="orange">'thumbnails'</span>: <span class="vert">false</span>, <span class="gris">// Affichage ou non de la navigation par Thumbnails</span><br />
+          <span class="orange">'navigation'</span>: <span class="vert">true</span>,  <span class="gris">// Affichage ou non de la navigation par flèches</span><br />
+          <span class="orange">'currentImg'</span>: <span class="jaune">0</span>,    <span class="gris"> // Première image appelée</span><br />
+          <span class="orange">'fadeTime'</span>: <span class="jaune">100</span>,   <span class="gris">// Durée de la transition lors de l'animation</span><br />
+          <span class="orange">'circular'</span>: <span class="vert">true</span>,     <span class="gris"> // Circulaire</span><br />
+          <span class="orange">'auto'</span>: <span class="vert">true</span>,       <span class="gris"> // Navigation automatique</span><br />
+          <span class="orange">'interval'</span>: <span class="jaune">3000</span>,  <span class="gris">// Intervalle pour la navigation automatique</span><br />
+          <span class="orange">'title'</span>: <span class="orange">'Deuxième exemple'</span>,<span class="gris"> // Titre principale du Slider</span><br />
+          <span class="orange">'keyboardNav'</span>: <span class="vert">true </span><span class="gris">// Navigation par les flèches du clavier</span><br />
+          <span class="orange">'caption'</span>: <span class="vert">true </span><span class="gris">// Affichage des captions</span><br />
+        });
+        </p>
+      </script>
+      
+      
+      
+      
+      <script type="text/javascript">
+        $('#pGallery').pGallery({
+          'thumbnails': true, // Affichage ou non de la navigation par Thumbnails 
+          'navigation': true,  // Affichage ou non de la navigation par flèches
+          'currentImg': 0,     // Première image appelée
+          'fadeTime': 500,    // Durée de la transition lors de l'animation
+          'circular': true,      // Circulaire
+          'auto': false,        // Navigation automatique
+          'interval': 5000,  // Intervalle pour la navigation automatique
+          'title': 'Titre principal du slider', // Titre principal du Slider
+          'keyboardNav': true, // Navigation par les flèches du clavier
+          'caption': false    // Affichage des captions
+        });
+        
+        $('#pGallery2').pGallery({
+          'thumbnails': false, // Affichage ou non de la navigation par Thumbnails
+          'navigation': true,  // Affichage ou non de la navigation par flèches
+          'currentImg': 0,     // Première image appelée
+          'fadeTime': 100,    // Durée de la transition lors de l'animation
+          'circular': true,      // Circulaire
+          'auto': true,        // Navigation automatique
+          'interval': 3000,  // Intervalle pour la navigation automatique
+          'title': 'Deuxième exemple', // Titre principal du Slider
+          'keyboardNav': true, // Navigation par les flèches du clavier
+          'caption': true    // Affichage des captions
+        });
+      </script>
+
+    </body>
+</html> 
